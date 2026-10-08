@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ashby &amp; Vale | Trial Lawyers in Baton Rouge</title>
+  <meta name="description" content="Ashby & Vale are trial lawyers for personal injury, criminal defense, family law and wrongful death cases across Louisiana. Free, confidential case reviews.">
+  <meta name="theme-color" content="#f5f0e6">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ashby &amp; Vale">
+  <meta property="og:title" content="Ashby &amp; Vale | Trial Lawyers in Baton Rouge">
+  <meta property="og:description" content="Trial lawyers for injury, criminal defense and family cases across Louisiana. Free, confidential case reviews.">
+  <!-- TODO: add og:image (1200x630 share card) once the firm has photography. -->
+  <meta name="twitter:card" content="summary">
+  <link rel="preload" href="fonts/cormorant-garamond-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="wrap nav__inner">
+      <a class="brand" href="#top" aria-label="Ashby and Vale, home">
+        <span class="brand__mark" aria-hidden="true">A<em>&amp;</em>V</span>
+        <span class="brand__name">Ashby &amp; Vale</span>
+      </a>
+      <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a href="#practice">Practice areas</a>
+        <a href="#results">Results</a>
+        <a href="#process">How it works</a>
+        <a href="#team">Attorneys</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav__actions">
+        <a class="nav__phone" href="tel:+12255550142"><span>(225) 555-0142</span></a>
+        <a class="btn btn--accent btn--sm" href="#review">Free case review</a>
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+          <span class="nav__toggle-label">Menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <figure class="hero__media">
+        <img src="images/hero-courthouse.jpg" width="960" height="1280" fetchpriority="high" alt="Marguerite Ashby walking up the courthouse steps at sunset, briefcase in hand">
+      </figure>
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="status" id="status"><span id="statusText">Phones answered 24/7</span></p>
+          <h1 class="display">Your worst day is <em>our daily work.</em></h1>
+          <p class="lede">Trial lawyers for injury, criminal defense and family cases across Louisiana. Free, confidential reviews, answered the same day.</p>
+          <div class="hero__ctas">
+            <a class="btn btn--accent" href="#review">Free case review</a>
+            <a class="btn btn--ghost" href="tel:+12255550142">(225) 555-0142</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Situation picker: routes visitors to the right help in one tap -->
+    <section class="situation" aria-label="Find the right help">
+      <div class="wrap situation__inner">
+        <div class="picker" id="picker">
+          <h2 class="picker__title">What happened?</h2>
+          <div class="picker__chips" role="radiogroup" aria-label="Choose what happened">
+            <button class="chip" role="radio" aria-checked="false" data-matter="auto">Car or truck wreck</button>
+            <button class="chip" role="radio" aria-checked="false" data-matter="work">Hurt at work</button>
+            <button class="chip" role="radio" aria-checked="false" data-matter="criminal">Arrested or charged</button>
+            <button class="chip" role="radio" aria-checked="false" data-matter="divorce">Divorce</button>
+            <button class="chip" role="radio" aria-checked="false" data-matter="custody">Custody dispute</button>
+            <button class="chip" role="radio" aria-checked="false" data-matter="death">Lost a loved one</button>
+          </div>
+          <div class="picker__answer" id="pickerAnswer" aria-live="polite">
+            <p class="picker__hint">Tap the closest match. We'll tell you what to do right now, before you ever talk to us.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="fieldnote" aria-label="A note on our approach">
+      <div class="wrap fieldnote__grid">
+        <p class="fieldnote__label">A note on how we work</p>
+        <div class="fieldnote__content">
+          <p class="fieldnote__statement">A hard moment calls for <em>a clear conversation.</em></p>
+          <div class="fieldnote__bottom">
+            <p>You speak with someone who can answer your questions and explain what happens next.</p>
+            <a class="textlink" href="#process">See the process</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRACTICE AREAS (tabs) ============ -->
+    <section class="section" id="practice">
+      <div class="wrap">
+        <h2 class="h2" data-reveal>Five practice areas. <em>All of them in court.</em></h2>
+        <div class="practice" data-reveal>
+          <div class="practice__tabs" role="tablist" aria-label="Practice areas" id="practiceTabs"></div>
+          <div class="practice__panel" id="practicePanel" role="tabpanel" tabindex="0"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESULTS (scroll-snap carousel) ============ -->
+    <!-- MOCK RESULTS: replace with real, client-approved outcomes. -->
+    <section class="section section--tint" id="results">
+      <div class="wrap">
+        <div class="results__head">
+          <h2 class="h2" data-reveal>Results we can talk about.</h2>
+          <div class="results__nav">
+            <button class="iconbtn" id="resPrev" aria-label="Previous results"><span aria-hidden="true">←</span></button>
+            <button class="iconbtn" id="resNext" aria-label="Next results"><span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="results__track" id="resTrack" tabindex="0" aria-label="Case results, scroll horizontally">
+        <article class="result">
+          <span class="result__type">Trucking collision</span>
+          <span class="result__amt">$11.4M</span>
+          <p>Jury verdict for a nurse whose car was rear-ended by an 18-wheeler on I-10. The carrier's last offer was $650,000.</p>
+        </article>
+        <article class="result">
+          <span class="result__type">Criminal defense</span>
+          <span class="result__amt">Dismissed</span>
+          <p>Felony drug charges dropped before trial after we showed the traffic stop had no legal basis.</p>
+        </article>
+        <article class="result">
+          <span class="result__type">Wrongful death</span>
+          <span class="result__amt">$6.85M</span>
+          <p>Settlement for the family of a refinery contractor killed by a known equipment defect.</p>
+        </article>
+        <article class="result">
+          <span class="result__type">Workplace injury</span>
+          <span class="result__amt">$2.3M</span>
+          <p>Recovery for a welder with a spinal injury, after his comp claim was denied twice.</p>
+        </article>
+        <article class="result">
+          <span class="result__type">Custody</span>
+          <span class="result__amt">Full custody</span>
+          <p>A father kept his two children in Baton Rouge after the other parent sought to relocate out of state.</p>
+        </article>
+        <article class="result">
+          <span class="result__type">DWI defense</span>
+          <span class="result__amt">Not guilty</span>
+          <p>Bench trial acquittal for a first responder. The breath test device had lapsed calibration records.</p>
+        </article>
+      </div>
+      <div class="wrap">
+        <p class="fineprint">Every case is different. Past results do not guarantee a similar outcome.</p>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS (sticky timeline) ============ -->
+    <section class="section" id="process">
+      <div class="wrap process">
+        <div class="process__intro">
+          <h2 class="h2">What happens after you reach out.</h2>
+          <p class="body">We learn the facts, explain where things stand, and tell you what needs attention next.</p>
+          <a class="btn btn--accent" href="#review">Free case review</a>
+        </div>
+        <ol class="steps" id="steps">
+          <li class="step">
+            <span class="step__index" aria-hidden="true">01</span>
+            <h3>Tell us what happened</h3>
+            <p>Call, or send the short form below. It takes about two minutes and stays confidential.</p>
+            <span class="step__when">Within the hour during office hours</span>
+          </li>
+          <li class="step">
+            <span class="step__index" aria-hidden="true">02</span>
+            <h3>Get a straight answer</h3>
+            <p>An attorney reviews your situation and tells you plainly whether you have a case, and what it's likely worth.</p>
+            <span class="step__when">Same or next business day</span>
+          </li>
+          <li class="step">
+            <span class="step__index" aria-hidden="true">03</span>
+            <h3>We build the case</h3>
+            <p>We gather records, preserve evidence, hire experts and deal with insurers and prosecutors so you don't have to.</p>
+            <span class="step__when">Weeks to months</span>
+          </li>
+          <li class="step">
+            <span class="step__index" aria-hidden="true">04</span>
+            <h3>We push for the result</h3>
+            <p>Most cases settle. When the offer isn't fair, we're ready to try it in front of a jury, and the other side knows it.</p>
+            <span class="step__when">You approve every decision</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ ATTORNEYS (bento) ============ -->
+    <section class="section section--tint" id="team">
+      <div class="wrap">
+        <h2 class="h2" data-reveal>The people who'll <em>stand beside you.</em></h2>
+        <div class="team" id="team-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS (single marquee) ============ -->
+    <!-- MOCK TESTIMONIALS: replace with real client reviews (check state bar rules on testimonials). -->
+    <section class="quotes" aria-label="Client reviews">
+      <div class="quotes__row">
+        <div class="quotes__track" id="quotesTrack">
+          <figure class="quote"><blockquote>“They answered at 11pm the night of my wreck. I never had to chase anyone for an update.”</blockquote><figcaption>Danielle M.<span>Auto accident client</span></figcaption></figure>
+          <figure class="quote"><blockquote>“Marcus walked me through every hearing. My charges were dismissed and my record is clean.”</blockquote><figcaption>Andre W.<span>Criminal defense client</span></figcaption></figure>
+          <figure class="quote"><blockquote>“Renée kept my kids at the center of everything. I finally felt like someone was in my corner.”</blockquote><figcaption>Kristen L.<span>Custody client</span></figcaption></figure>
+          <figure class="quote"><blockquote>“The insurance company offered $40,000. Ashby &amp; Vale got us more than twenty times that.”</blockquote><figcaption>Robert and Ellen T.<span>Wrongful death clients</span></figcaption></figure>
+          <figure class="quote"><blockquote>“Straight answers, no legal jargon. They told me the truth even when it wasn't what I wanted to hear.”</blockquote><figcaption>Luis G.<span>Workplace injury client</span></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CASE REVIEW WIZARD ============ -->
+    <section class="section" id="review">
+      <div class="wrap review">
+        <div class="review__aside">
+          <h2 class="h2">Find out where you stand. <em>Free.</em></h2>
+          <p class="body">Four quick questions. An attorney, not a salesperson, reviews every request.</p>
+          <ul class="assure">
+            <li>Confidential from the first message</li>
+            <li>Same-day response on business days</li>
+            <li>No fee on injury cases unless we win</li>
+          </ul>
+          <p class="fineprint">Sending this form does not create an attorney-client relationship. Please don't include anything you'd want kept privileged until we've spoken.</p>
+        </div>
+
+        <form class="wizard" id="wizard" novalidate>
+          <div class="wizard__progress" aria-hidden="true"><span id="wizBar"></span></div>
+          <p class="wizard__count" id="wizCount">Question 1 of 4</p>
+
+          <!-- Step 1 -->
+          <fieldset class="wstep is-active" data-step="1">
+            <legend>What is this about?</legend>
+            <div class="options" id="matterOptions">
+              <label class="opt"><input type="radio" name="matter" value="Car or truck wreck"><span>Car or truck wreck</span></label>
+              <label class="opt"><input type="radio" name="matter" value="Hurt at work"><span>Hurt at work</span></label>
+              <label class="opt"><input type="radio" name="matter" value="Arrested or charged"><span>Arrested or charged</span></label>
+              <label class="opt"><input type="radio" name="matter" value="Divorce"><span>Divorce</span></label>
+              <label class="opt"><input type="radio" name="matter" value="Custody dispute"><span>Custody dispute</span></label>
+              <label class="opt"><input type="radio" name="matter" value="Wrongful death"><span>Lost a loved one</span></label>
+              <label class="opt opt--wide"><input type="radio" name="matter" value="Something else"><span>Something else</span></label>
+            </div>
+            <p class="err" data-err="matter">Pick the closest option. You can explain more later.</p>
+          </fieldset>
+
+          <!-- Step 2 -->
+          <fieldset class="wstep" data-step="2">
+            <legend>When did it happen?</legend>
+            <div class="options options--list">
+              <label class="opt"><input type="radio" name="when" value="In the last week"><span>In the last week</span></label>
+              <label class="opt"><input type="radio" name="when" value="In the last month"><span>In the last month</span></label>
+              <label class="opt"><input type="radio" name="when" value="1 to 6 months ago"><span>1 to 6 months ago</span></label>
+              <label class="opt"><input type="radio" name="when" value="More than 6 months ago"><span>More than 6 months ago</span></label>
+            </div>
+            <p class="err" data-err="when">Choose a timeframe. Deadlines can apply, so this helps us prioritize.</p>
+            <p class="wizard__sub">Has an insurance company, police officer or another lawyer contacted you?</p>
+            <div class="seg">
+              <label><input type="radio" name="contacted" value="Yes"><span>Yes</span></label>
+              <label><input type="radio" name="contacted" value="No"><span>No</span></label>
+              <label><input type="radio" name="contacted" value="Not sure" checked><span>Not sure</span></label>
+            </div>
+          </fieldset>
+
+          <!-- Step 3 -->
+          <fieldset class="wstep" data-step="3">
+            <legend>In a few sentences, what happened?</legend>
+            <div class="field">
+              <label for="details">Brief description <span class="opt-tag">optional</span></label>
+              <textarea id="details" name="details" rows="6" maxlength="800" aria-describedby="detailsHelp"></textarea>
+              <p class="help" id="detailsHelp"><span id="detailsCount">0</span> / 800. The basics are enough. We'll ask the rest when we talk.</p>
+            </div>
+          </fieldset>
+
+          <!-- Step 4 -->
+          <fieldset class="wstep" data-step="4">
+            <legend>How should we reach you?</legend>
+            <div class="fields">
+              <div class="field">
+                <label for="name">Full name</label>
+                <input id="name" name="name" autocomplete="name" required>
+                <p class="err" data-err="name">Please enter your name.</p>
+              </div>
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+                <p class="err" data-err="phone">Enter a 10-digit phone number.</p>
+              </div>
+              <div class="field field--full">
+                <label for="email">Email <span class="opt-tag">optional</span></label>
+                <input id="email" name="email" type="email" autocomplete="email">
+                <p class="err" data-err="email">That email doesn't look right.</p>
+              </div>
+              <div class="field">
+                <label for="method">Best way to reach you</label>
+                <select id="method" name="method">
+                  <option>Phone call</option>
+                  <option>Text message</option>
+                  <option>Email</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="time">Best time</label>
+                <select id="time" name="time">
+                  <option>As soon as possible</option>
+                  <option>Morning</option>
+                  <option>Afternoon</option>
+                  <option>Evening</option>
+                </select>
+              </div>
+            </div>
+            <label class="check">
+              <input type="checkbox" name="consent" id="consent">
+              <span>I understand this request doesn't make Ashby &amp; Vale my lawyers yet.</span>
+            </label>
+            <p class="err" data-err="consent">Please confirm to continue.</p>
+          </fieldset>
+
+          <!-- Done -->
+          <div class="wdone" id="wdone" hidden tabindex="-1">
+            <h3 id="doneTitle">Thank you.</h3>
+            <p id="doneText"></p>
+            <p class="wdone__ref">Reference <strong id="doneRef"></strong></p>
+            <a class="btn btn--ghost" href="tel:+12255550142">(225) 555-0142</a>
+          </div>
+
+          <div class="wizard__actions" id="wizActions">
+            <button type="button" class="btn btn--ghost" id="wizBack" disabled>Back</button>
+            <button type="button" class="btn btn--accent" id="wizNext">Continue</button>
+          </div>
+          <p class="err err--form" id="formErr" role="alert"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section section--tint" id="faq">
+      <div class="wrap faq">
+        <h2 class="h2" data-reveal>Questions people ask us first.</h2>
+        <div class="faq__search">
+          <label for="faqSearch" class="sr">Search questions</label>
+          <input id="faqSearch" type="search" placeholder="Search, e.g. fees, insurance, bail">
+        </div>
+        <div class="faq__list" id="faqList"></div>
+        <div class="faq__empty" id="faqEmpty" hidden>
+          <p>No question matches that yet. Ask us directly and we'll answer it for you.</p>
+          <a class="btn btn--accent btn--sm" href="#review">Free case review</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div>
+        <a class="brand" href="#top"><span class="brand__mark" aria-hidden="true">A<em>&amp;</em>V</span><span class="brand__name">Ashby &amp; Vale</span></a>
+        <p class="footer__tag">Trial lawyers. Serving Louisiana since 1995.</p>
+      </div>
+      <div>
+        <h3>Office</h3>
+        <address>401 Laurel Street, Suite 1200<br>Baton Rouge, LA 70801</address>
+        <a href="https://maps.google.com/?q=401+Laurel+Street+Baton+Rouge+LA" target="_blank" rel="noopener">Get directions</a>
+      </div>
+      <div>
+        <h3>Hours</h3>
+        <p>Office: Mon to Fri, 8am to 6pm<br>Phones: answered 24/7</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p><a href="tel:+12255550142">(225) 555-0142</a><br><a href="mailto:intake@ashbyvale.com">intake@ashbyvale.com</a></p>
+      </div>
+    </div>
+    <div class="wrap footer__legal">
+      <p>Attorney advertising. The information on this website is for general information only and is not legal advice. Viewing this site or contacting the firm does not create an attorney-client relationship. Prior results do not guarantee a similar outcome.</p>
+      <p>&copy; <span id="year"></span> Ashby &amp; Vale, LLC<br><a href="privacy.html">Privacy</a> &nbsp; <a href="privacy.html#terms">Terms of use</a></p>
+    </div>
+  </footer>
+
+  <!-- Mobile action bar -->
+  <div class="mbar" id="mbar">
+    <a class="btn btn--ghost" href="tel:+12255550142">Call</a>
+    <a class="btn btn--accent" href="#review">Free case review</a>
+  </div>
+
+  <!-- Attorney bio dialog -->
+  <dialog class="bio" id="bio" aria-labelledby="bioName">
+    <button class="iconbtn bio__close" id="bioClose" aria-label="Close"><span aria-hidden="true">×</span></button>
+    <div class="bio__body" id="bioBody"></div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
