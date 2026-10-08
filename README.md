@@ -1,6 +1,6 @@
 # Ashby & Vale redesign preview
 
-Open `index.html` to review the site. The redesign keeps the supplied static HTML, CSS, JavaScript, fonts, images, and case-review flow. It uses a warm paper/ink/brick palette, an editorial hero, a separate situation picker, quieter case and process layouts, still testimonials, and a less card-heavy team and FAQ presentation. The office status is plain text, the mock-number band has been replaced with an editorial note, and decorative icons have been removed in favor of clear labels and restrained typography.
+Open `index.html` to review the site. The redesign keeps the supplied static HTML, CSS, JavaScript, fonts, images, and case-review flow. It uses a warm stone/ink/brick palette with a darker editorial interlude and case-results section, an editorial hero, a separate situation picker, quieter case and process layouts, still testimonials, and a less card-heavy team and FAQ presentation. The office status is plain text, the mock-number band has been replaced with an editorial note, and decorative icons have been removed in favor of clear labels and restrained typography.
 
 ## Before publishing
 
